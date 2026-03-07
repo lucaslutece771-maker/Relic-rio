@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt br">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="main_menu.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unknown</title>
+</head>
+<body>
+    <div class="login-container">
+    <h1>ACESSO DO AGENTE</h1>
+    <input type="text" id="username" placeholder="ID de agente">
+    <input type="password" id="password" placeholder="Senha de acesso">
+    <button onclick="login()">Entrar</button>
+    <div class="message" id="message"></div>
+  </div>
+
+<script>
+    function login() {
+      const user = document.getElementById("username").value;
+      const pass = document.getElementById("password").value;
+      const message = document.getElementById("message");
+
+      if (user === "t4ynaHilst" && pass === "NKVD19L!") {
+        message.textContent = "Acesso concedido. Redirecionando...";
+        setTimeout(() => {
+          window.location.href = "./KGB.html"; 
+        }, 8000);
+      } else {
+        message.textContent = "Acesso negado. Xó Agente Americano.";
+      }
+    }
+  </script>
+
+
+</body>
+</html>
